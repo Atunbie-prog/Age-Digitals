@@ -20,9 +20,3 @@ document.addEventListener('click', (e) => {
         navLinks.classList.remove('active');
     }
 });
-
-function send(){
-  let msg = document.getElementById("chatInput").value;
-  document.getElementById("chatLog").innerText += msg + "\n";
-  document.getElementById("chatInput").value = "";
-}
