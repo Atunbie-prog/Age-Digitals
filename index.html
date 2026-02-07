@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>AGE Digitals Official Website.</title>
+    <title>AGE Digitals Official Website</title>
 </head>
 <body>
     <div class="floating-objects">
@@ -59,7 +59,7 @@
             <div class="hero_desc">
                 <h1>Welcome to <span>AGE Digitals</span></h1>
                 <p>Your one-stop solution for all digital needs. We provide top-notch services to help your business thrive in the digital world.</p>
-                <a href="#" class="btn"><i class="fa-solid fa-circle-info"></i> Learn More</a>
+                <a href="#contact_section" class="btn"><i class="fa-solid fa-circle-info"></i> Learn More</a>
             </div>
 
             <div class="hero_image">
@@ -96,7 +96,7 @@
     </section>
 
     <h1 class="about_header">About Us</h1>
-    <section class="about_section"  id="about_section">
+    <section class="about_section" id="about_section">
         <div class="about_image">
             <img src="img/hero_image.jpg" alt="About Image">
         </div>
@@ -105,28 +105,57 @@
             <p>AGE Digitals is a leading digital agency dedicated to providing innovative solutions for businesses of all sizes. Our team of experts specializes in web development, digital marketing, and graphic design, ensuring that your brand stands out in the competitive online landscape.</p>
 
             <div class="about_content_links">
-                <a href="#" class="btn"><i class="fa-solid fa-book-open"></i> Read More</a>
+                <a href="#contact_section" class="btn"><i class="fa-solid fa-book-open"></i> Read More</a>
                 <a href="tel:09048383179"><i class="fa-solid fa-phone"></i> 09048383179</a>
             </div>
         </div>
     </section>
 
-    <div class="contact_section" id="contact_section">
-        <h1>Contact Us</h1>
-        <form action="#">
+    <h1 class="contact_header">Contact Us</h1>
+    <section class="contact_section" id="contact_section">
+        <div class="contact_text">
+            <div class="contact_description">
+                <h2>Get in Touch With Us</h2>
+                <p>Have questions or want to discuss your project? We're here to help! Fill out the form below, and our team will get back to you as soon as possible.</p>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><i class="fa-solid fa-laptop"></i> Business Websites</li>
+                    <li><i class="fa-solid fa-mobile-screen"></i> Web Apps</li>
+                    <li><i class="fa-solid fa-pen-nib"></i> Graphic Design</li>
+                    <li><i class="fa-solid fa-bullhorn"></i> Digital Marketing</li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i> SEO Optimization</li>
+                </ul>
+            </div>
+        </div>
+        <form action="#" method="POST">
             <div class="name_phone">
                 <label for="name">Name:</label>
-                <input type="text" placeholder="Enter Your Name" required>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                
                 <label for="phone">Phone Number:</label>
-                <input type="tel" placeholder="Enter Phone Number" required>
-                <textarea id="msg" placeholder="Type your message..." rows="5"></textarea>
-                <br>
-                <button type="submit">Send</button>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required>
+                
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="message" placeholder="Type your message..." rows="5" required></textarea>
+                
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
             </div>
         </form>
-    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer_content">
+            <p>&copy; 2024 AGE Digitals. All rights reserved.</p>
+            <div class="social_links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="functions.js"></script>
 </body>
 </html>
-
