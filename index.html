@@ -3,159 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Atunbi Gabriel Ebunoluwa - Web Developer</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>AGE Digitals Official Website <!-- Newest --></title>
 </head>
 <body>
-    <div class="floating-objects">
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-        <div class="floating-object"></div>
-    </div>
-
-    <section class="hero_nav">
-        <nav>
-            <div class="logo">
-                <h1>AGE Digitals</h1>
-            </div>
-
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-initial">A</span>
+                <span class="logo-text">GE</span>
+            </a>
+            
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
-            <ul class="nav_links" id="navLinks">
-                <li><a href="#" id="on"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="#about_section"><i class="fa-solid fa-user"></i> About</a></li>
-                <li><a href="#"><i class="fa-solid fa-briefcase"></i> Services</a></li>
-                <li><a href="#contact_section"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="cv.html">Credentials</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <div class="cta">
-                <a href="http://wa.me/2349048383179"><i class="fa-solid fa-rocket"></i> Hire me</a>
-            </div>
-        </nav>
+            <a href="http://wa.me/2349048383179" class="nav-cta">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Let's Talk</span>
+            </a>
+        </div>
+    </nav>
 
-        <div class="hero_content">
-            <div class="hero_desc">
-                <h1>Welcome to <span>AGE Digitals</span></h1>
-                <p>Your one-stop solution for all digital needs. We provide top-notch services to help your business thrive in the digital world.</p>
-                <a href="#contact_section" class="btn"><i class="fa-solid fa-circle-info"></i> Learn More</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span>Web Developer</span>
+                    <div class="label-line"></div>
+                </div>
+                <h1 class="hero-title">
+                    Transforming <br>
+                    <span class="title-accent">Creative Visions</span> <br>
+                    Into Digital Reality
+                </h1>
+                <p class="hero-text">
+                    I bridge the gap between complex functionality and aesthetic clarity, 
+                    crafting high-performance digital solutions that empower brands and drive growth.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </a>
+                </div>
             </div>
+            
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="card-header">
+                        <div class="card-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="card-title">index.html</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="code-line"><span class="code-tag">&lt;div</span> <span class="code-attr">class=</span><span class="code-value">"excellence"</span><span class="code-tag">&gt;</span></div>
+                        <div class="code-line indent-1"><span class="code-tag">&lt;h1&gt;</span>Every line of code</div>
+                        <div class="code-line indent-2">serves a purpose<span class="code-tag">&lt;/h1&gt;</span></div>
+                        <div class="code-line indent-1"><span class="code-tag">&lt;p&gt;</span>Seamless experiences</div>
+                        <div class="code-line indent-2">User-centric design<span class="code-tag">&lt;/p&gt;</span></div>
+                        <div class="code-line"><span class="code-tag">&lt;/div&gt;</span></div>
+                    </div>
+                </div>
+                <div class="floating-badge badge-1">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Clean Code</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>Responsive</span>
+                </div>
+                <div class="floating-badge badge-3">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Fast Load</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+    </section>
 
-            <div class="hero_image">
-                <img src="img/hero_image.jpg" alt="Hero Image">
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I Do</span>
+                <h2 class="section-title">Crafting Digital <span>Experiences</span></h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="1">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Visual identity and branding that captures your essence and resonates with your audience.</p>
+                    <a href="services.html#graphic-design" class="service-link">
+                        <span>Learn more</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-service="2">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <h3>Product Design</h3>
+                    <p>Innovative product interfaces that balance functionality with exceptional user experience.</p>
+                    <a href="services.html#product-design" class="service-link">
+                        <span>Learn more</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-service="3">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centric interfaces designed with psychology, accessibility, and delight in mind.</p>
+                    <a href="services.html#uiux-design" class="service-link">
+                        <span>Learn more</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-service="4">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>High-performance websites built with modern technologies and best practices.</p>
+                    <a href="services.html#web-development" class="service-link">
+                        <span>Learn more</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="white_part">
-        <div class="box">
-            <i class="fa-solid fa-laptop-code"></i>
-            <h3>Web Design</h3>
-        </div>
-        <div class="box">
-            <i class="fa-solid fa-chart-line"></i>
-            <h3>SEO</h3>
-        </div>
-        <div class="box">
-            <i class="fa-solid fa-bullhorn"></i>
-            <h3>Marketing</h3>
-        </div>
-        <div class="box">
-            <i class="fa-solid fa-palette"></i>
-            <h3>Branding</h3>
-        </div>
-        <div class="box">
-            <i class="fa-solid fa-code"></i>
-            <h3>Development</h3>
-        </div>
-        <div class="box">
-            <i class="fa-solid fa-headset"></i>
-            <h3>Support</h3>
-        </div>
-    </section>
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Selected <span>Projects</span></h2>
+            </div>
+            
+            <div class="projects-preview-grid">
+                <a href="projects.html" class="project-preview" data-project="1">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <span class="view-project">View Project <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack web application with payment integration</p>
+                    </div>
+                </a>
 
-    <h1 class="about_header">About Us</h1>
-    <section class="about_section" id="about_section">
-        <div class="about_image">
-            <img src="img/hero_image.jpg" alt="About Image">
-        </div>
-        <div class="about_content">
-            <h2>Professional and Creative<br> <span>Web Development...</span></h2>
-            <p>AGE Digitals is a leading digital agency dedicated to providing innovative solutions for businesses of all sizes. Our team of experts specializes in web development, digital marketing, and graphic design, ensuring that your brand stands out in the competitive online landscape.</p>
+                <a href="projects.html" class="project-preview" data-project="2">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <span class="view-project">View Project <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Corporate Website</h3>
+                        <p>Modern business site with CMS integration</p>
+                    </div>
+                </a>
 
-            <div class="about_content_links">
-                <a href="#contact_section" class="btn"><i class="fa-solid fa-book-open"></i> Read More</a>
-                <a href="tel:09048383179"><i class="fa-solid fa-phone"></i> 09048383179</a>
+                <a href="projects.html" class="project-preview" data-project="3">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <span class="view-project">View Project <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Dashboard</h3>
+                        <p>Interactive data visualization and analytics</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cta-center">
+                <a href="projects.html" class="btn btn-outline">
+                    <span>View All Projects</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <h1 class="contact_header">Contact Us</h1>
-    <section class="contact_section" id="contact_section">
-        <div class="contact_text">
-            <div class="contact_description">
-                <h2>Get in Touch With Us</h2>
-                <p>Have questions or want to discuss your project? We're here to help! Fill out the form below, and our team will get back to you as soon as possible.</p>
-            </div>
-            <div class="list">
-                <ul>
-                    <li><i class="fa-solid fa-laptop"></i> Business Websites</li>
-                    <li><i class="fa-solid fa-mobile-screen"></i> Web Apps</li>
-                    <li><i class="fa-solid fa-pen-nib"></i> Graphic Design</li>
-                    <li><i class="fa-solid fa-bullhorn"></i> Digital Marketing</li>
-                    <li><i class="fa-solid fa-magnifying-glass"></i> SEO Optimization</li>
-                </ul>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="section-label">Get In Touch</span>
+                        <h2 class="section-title">Let's Build <span>Something Great</span></h2>
+                    </div>
+                    <p class="contact-text">
+                        Have a project in mind? I'm always open to discussing new opportunities 
+                        and creative collaborations. Let's turn your vision into reality.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:atunebig@gmail.com">atunebig@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="http://wa.me/2349048383179">+234 904 838 3179</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fa-solid fa-user"></i>
+                            Full Name
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fa-solid fa-envelope"></i>
+                            Email Address
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">
+                            <i class="fa-solid fa-tag"></i>
+                            Subject
+                        </label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fa-solid fa-message"></i>
+                            Message
+                        </label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
         </div>
-        <form action="#" method="POST">
-            <div class="name_phone">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
-                
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required>
-                
-                <label for="msg">Message:</label>
-                <textarea id="msg" name="message" placeholder="Type your message..." rows="5" required></textarea>
-                
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
-            </div>
-        </form>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer_content">
-            <p>&copy; 2024 AGE Digitals. All rights reserved.</p>
-            <div class="social_links">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-initial">A</span>
+                        <span class="logo-text">GE</span>
+                    </div>
+                    <p>Transforming creative visions into seamless, user-centric web experiences.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="process.html">Process</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="cv.html">Credentials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-envelope"></i> atunebig@gmail.com</p>
+                    <p><i class="fa-brands fa-whatsapp"></i> +234 904 838 3179</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Atunbi Gabriel Ebunoluwa. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="functions.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
