@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Atunbi Gabriel Ebunoluwa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .coming-soon-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .cs-glow {
+      position: absolute;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(200,169,110,0.1) 0%, transparent 65%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      animation: glow-pulse 5s ease-in-out infinite;
+    }
+    @keyframes glow-pulse {
+      0%,100% { opacity: 0.6; transform: translate(-50%,-50%) scale(1); }
+      50%      { opacity: 1;   transform: translate(-50%,-50%) scale(1.12); }
+    }
+    .coming-soon-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(200,169,110,0.07) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+    }
+    .coming-soon-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 620px;
+      text-align: center;
+    }
+    .cs-icon-ring {
+      position: relative;
+      width: 110px; height: 110px;
+      margin: 0 auto 2.2rem;
+    }
+    .cs-icon-wrap {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      border-radius: 50%;
+      font-size: 2rem;
+      color: var(--gold);
+      z-index: 2;
+      animation: icon-bob 3s ease-in-out infinite;
+    }
+    @keyframes icon-bob {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      25%      { transform: translateY(-6px) rotate(-4deg); }
+      75%      { transform: translateY(-3px) rotate(4deg); }
+    }
+    .cs-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid var(--gold-border);
+      animation: ring-expand 3s ease-out infinite;
+      opacity: 0;
+    }
+    .cs-ring-1 { inset: -14px; animation-delay: 0s; }
+    .cs-ring-2 { inset: -28px; animation-delay: 0.7s; }
+    @keyframes ring-expand {
+      0%   { opacity: 0.5; transform: scale(0.9); }
+      100% { opacity: 0;   transform: scale(1.1); }
+    }
+    .cs-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .cs-label::before,
+    .cs-label::after { content: ''; display: block; width: 22px; height: 1px; background: var(--gold); }
+    .cs-title {
+      font-size: clamp(2rem, 5.5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.2rem;
+    }
+    .cs-title span { color: var(--gold); font-style: italic; font-weight: 700; }
+    .cs-text {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      max-width: 460px;
+      margin: 0 auto 2.2rem;
+    }
+    .cs-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .cs-divider { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.6rem; }
+    .cs-divider::before,
+    .cs-divider::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.07); }
+    .cs-divider span { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; white-space: nowrap; }
+    .cs-socials { display: flex; gap: 0.75rem; justify-content: center; }
+    .cs-socials a {
+      width: 40px; height: 40px;
+      display: grid; place-items: center;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: border-color 0.28s, color 0.28s, background 0.28s, transform 0.28s;
+    }
+    .cs-socials a:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); transform: translateY(-3px); }
+    @media (max-width: 480px) { .cs-actions { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-initial">A</span><span class="logo-text">GE</span></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="cv.html">Credentials</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="http://wa.me/2349048383179" class="nav-cta"><i class="fa-brands fa-whatsapp"></i><span>Let's Talk</span></a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header" style="display:none;">
+    <div class="container">
+      <div class="header-content">
+        <span class="page-label">Portfolio</span>
+        <h1 class="page-title">My <span>Projects</span></h1>
+        <p class="page-subtitle">Showcasing creativity, precision, and innovation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMING SOON -->
+  <section class="coming-soon-section">
+    <div class="cs-glow"></div>
+    <div class="coming-soon-inner">
+      <div class="cs-icon-ring">
+        <div class="cs-icon-wrap">
+          <i class="fa-solid fa-hammer"></i>
+        </div>
+        <div class="cs-ring cs-ring-1"></div>
+        <div class="cs-ring cs-ring-2"></div>
+      </div>
+      <span class="cs-label">Portfolio</span>
+      <h1 class="cs-title">Page Will Be<br><span>Available Shortly</span></h1>
+      <p class="cs-text">I'm currently curating my best work to showcase here. Something great is on the way — check back soon or reach out directly.</p>
+      <div class="cs-actions">
+        <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i><span>Back to Home</span></a>
+        <a href="#contact" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i><span>Contact Me</span></a>
+      </div>
+      <div class="cs-divider"><span>or stay in the loop</span></div>
+      <div class="cs-socials">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="projects-section" style="display:none;">
+    <div class="container">
+      <div class="projects-grid">
+
+        <!-- ══ PROJECT 1 ══════════════════════════════════════
+             Insert your image inside .project-image:
+             <img src="images/ecommerce.jpg" alt="E-Commerce Platform">
+        ═══════════════════════════════════════════════════════ -->
+        <div class="project-card fade-up">
+          <div class="project-image">
+            <!-- YOUR IMAGE FOR PROJECT 1 GOES HERE -->
+          </div>
+          <div class="project-overlay">
+            <div class="project-tags">
+              <span>E-Commerce</span>
+              <span>Full-Stack</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>E-Commerce Platform</h3>
+            <p>A comprehensive online shopping platform featuring product catalogs, shopping cart functionality, secure payment integration, and order tracking. Built with responsive design for seamless shopping on any device.</p>
+            <div class="project-tech">
+              <span><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span><i class="fa-brands fa-python"></i> Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ PROJECT 2 ══════════════════════════════════════ -->
+        <div class="project-card fade-up">
+          <div class="project-image">
+            <!-- YOUR IMAGE FOR PROJECT 2 GOES HERE -->
+          </div>
+          <div class="project-overlay">
+            <div class="project-tags">
+              <span>Corporate</span>
+              <span>CMS</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Corporate Website</h3>
+            <p>Modern business website with content management system, dynamic blog section, team profiles, and service showcases. Optimized for SEO and featuring smooth animations that enhance user engagement.</p>
+            <div class="project-tech">
+              <span><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span><i class="fa-brands fa-sass"></i> Sass</span>
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span><i class="fa-solid fa-database"></i> SQLite</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ PROJECT 3 ══════════════════════════════════════ -->
+        <div class="project-card fade-up">
+          <div class="project-image">
+            <!-- YOUR IMAGE FOR PROJECT 3 GOES HERE -->
+          </div>
+          <div class="project-overlay">
+            <div class="project-tags">
+              <span>Dashboard</span>
+              <span>Analytics</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Portfolio Dashboard</h3>
+            <p>Interactive data visualization dashboard for tracking portfolio performance, featuring real-time charts, customizable widgets, and detailed analytics. Clean interface with intuitive navigation.</p>
+            <div class="project-tech">
+              <span><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span><i class="fa-solid fa-chart-bar"></i> Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ PROJECT 4 ══════════════════════════════════════ -->
+        <div class="project-card fade-up">
+          <div class="project-image">
+            <!-- YOUR IMAGE FOR PROJECT 4 GOES HERE -->
+          </div>
+          <div class="project-overlay">
+            <div class="project-tags">
+              <span>Social</span>
+              <span>Real-time</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Social Media App</h3>
+            <p>Dynamic social networking platform with user profiles, post creation, real-time notifications, and interactive features. Implements secure authentication and data privacy measures for user protection.</p>
+            <div class="project-tech">
+              <span><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span><i class="fa-brands fa-python"></i> Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ PROJECT 5 ══════════════════════════════════════ -->
+        <div class="project-card fade-up">
+          <div class="project-image">
+            <!-- YOUR IMAGE FOR PROJECT 5 GOES HERE -->
+          </div>
+          <div class="project-overlay">
+            <div class="project-tags">
+              <span>Restaurant</span>
+              <span>Booking</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Restaurant Website</h3>
+            <p>Elegant restaurant website featuring online menu, table reservation system, photo gallery, and customer reviews. Mobile-optimized with location maps and contact integration for easy customer access.</p>
+            <div class="project-tech">
+              <span><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span><i class="fa-solid fa-map-location-dot"></i> Maps API</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ PROJECT 6 ══════════════════════════════════════ -->
+        <div class="project-card fade-up">
+          <div class="project-image">
+            <!-- YOUR IMAGE FOR PROJECT 6 GOES HERE -->
+          </div>
+          <div class="project-overlay">
+            <div class="project-tags">
+              <span>Portfolio</span>
+              <span>Creative</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Creative Portfolio</h3>
+            <p>Stunning portfolio website for creative professionals with grid-based project showcase, filterable categories, lightbox galleries, and smooth page transitions. Designed to highlight creative work beautifully.</p>
+            <div class="project-tech">
+              <span><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span><i class="fa-brands fa-sass"></i> Sass</span>
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span><i class="fa-solid fa-image"></i> Lightbox</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" style="display:none;">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Have a Project in Mind?</h2>
+        <p>Let's create something amazing together</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-primary"><span>Start a Project</span><i class="fa-solid fa-arrow-right"></i></a>
+          <a href="services.html" class="btn btn-outline"><span>View Services</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's Build <span>Something Great</span></h2>
+          <p class="contact-text">Have a project in mind? I'm always open to discussing new opportunities and creative collaborations.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div><h4>Email</h4><a href="/cdn-cgi/l/email-protection#c2a3b6b7aca7a0aba582a5afa3abaeeca1adaf"><span class="__cf_email__" data-cfemail="432237362d26212a2403242e222a2f6d202c2e">[email&#160;protected]</span></a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div><h4>WhatsApp</h4><a href="http://wa.me/2349048383179">+234 904 838 3179</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div><h4>Location</h4><p>Lagos, Nigeria</p></div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form fade-up" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name"><i class="fa-solid fa-user"></i> Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject"><i class="fa-solid fa-tag"></i> Subject / Enquiry</label>
+            <input type="text" id="subject" name="subject" placeholder="e.g. Website Redesign Project" required />
+          </div>
+          <div class="form-group">
+            <label for="message"><i class="fa-solid fa-message"></i> Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit"><i class="fa-brands fa-whatsapp"></i><span>Send via WhatsApp</span></button>
+          <div class="form-toast" id="formToast"><i class="fa-solid fa-circle-check"></i><span>Opening WhatsApp with your message…</span></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="logo-initial">A</span><span class="logo-text">GE</span></div>
+          <p>Transforming creative visions into seamless, user-centric web experiences.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="process.html">Process</a></li></ul></div>
+        <div class="footer-links"><h4>Resources</h4><ul><li><a href="cv.html">Credentials</a></li><li><a href="faq.html">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div class="footer-contact"><h4>Contact</h4><p><i class="fa-solid fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98f9ecedf6fdfaf1ffd8fff5f9f1f4b6fbf7f5">[email&#160;protected]</a></p><p><i class="fa-brands fa-whatsapp"></i> +234 904 838 3179</p><p><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Atunbi Gabriel Ebunoluwa. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      navMenu.classList.toggle('open');
+    });
+
+    navMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('open');
+      });
+    });
+
+    window.addEventListener('scroll', function() {
+      document.getElementById('navbar').style.boxShadow =
+        window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.55)' : 'none';
+    }, { passive: true });
+
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          var siblings = e.target.parentElement.querySelectorAll('.fade-up');
+          siblings.forEach(function(el, i) {
+            if (!el.classList.contains('visible')) {
+              el.style.transitionDelay = (i * 0.09) + 's';
+            }
+          });
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(function(el) { obs.observe(el); });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name    = document.getElementById('name').value.trim();
+      var email   = document.getElementById('email').value.trim();
+      var subject = document.getElementById('subject').value.trim();
+      var message = document.getElementById('message').value.trim();
+      if (!name || !email || !subject || !message) {
+        alert('Please fill in all fields before sending.');
+        return;
+      }
+      var msg = 'Hello Gabriel! I found you through your website.\n\n'
+              + '\uD83D\uDC64 *Name:* ' + name + '\n'
+              + '\uD83D\uDCE7 *Email:* ' + email + '\n'
+              + '\uD83D\uDCCC *Subject:* ' + subject + '\n\n'
+              + '\uD83D\uDCAC *Message:*\n' + message;
+      var toast = document.getElementById('formToast');
+      toast.classList.add('show');
+      setTimeout(function() {
+        window.open('https://wa.me/2349048383179?text=' + encodeURIComponent(msg), '_blank');
+        toast.classList.remove('show');
+        e.target.reset();
+      }, 900);
+    });
+  </script>
+</body>
+</html>
